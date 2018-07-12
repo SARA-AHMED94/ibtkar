@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center pt-5">
+    <div class="col-sm-6 text-center">
+      <h2>My products</h2>
+      <ng-template ngFor let-item let-i='index' [ngForOf]="arr">
+        <div class="card mb-3">
+          <i class="icon-trash-empty align-self-end text-bold" (click)="remove(index)"></i>
+          <img class="card-img-top" src="{{item.productImage}}" alt="Card image cap" style="max-width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">Name : {{item.productName}}</h5>
+            <p class="card-text">
+              <span class="font-weight-bold">Category :</span> {{item.productCategory}} &nbsp;
+              <span class="font-weight-bold">Price</span> :{{item.productPrice}}</p>
+            <span class="font-weight-bold">Number Of Items</span> :&nbsp;
+            <input type="number" name="items" #box (keyup)="onKey(box.value)" min="0">
+            <p class="text-danger" *ngIf="val==false">Please Enter positive numbers only </p>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

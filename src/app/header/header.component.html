@@ -1,0 +1,43 @@
+<header class="bg-dark">
+
+  <div class="container ">
+    <nav class="navbar p-4">
+      <a routerLink="/" class="logo">LOGO</a>
+
+      <div>
+        <div class="btn-group mr-3">
+          <div class="btn-group" ngbDropdown placement="bottom-right" role="group" aria-label="Button group with nested dropdown">
+            <img src="../../assets/images/header/user.jpg" alt="user_image" class="mr-1 user-image " ngbDropdownToggle>
+            <div class="dropdown-menu " ngbDropdownMenu>
+              <button class="dropdown-item">View Profile</button>
+              <button class="dropdown-item">Sign Out </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group mr-3">
+          <div class="btn-group" ngbDropdown placement="bottom-right" role="group" aria-label="Button group with nested dropdown">
+            <i class="icon-basket" ngbDropdownToggle></i>
+            <div class="dropdown-menu  " ngbDropdownMenu>
+              <a routerLink="/cart" class="dropdown-item ">Show selected products</a>
+              <a routerLink="/submit" class="dropdown-item ">Submit order </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid part2 p-0 ">
+    <div class="cartheader h-100 ">
+      <div class="container h-100 ">
+        <div class="row align-items-center h-100">
+          <div class="col-sm-4 ">
+            <h5>Shop List</h5>
+            <h4>Our Products</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

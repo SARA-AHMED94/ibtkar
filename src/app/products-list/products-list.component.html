@@ -1,0 +1,26 @@
+<section>
+  <div class="container mt-5">
+    <h2 class="text-center">Products</h2>
+    <input [(ngModel)]="searchText" placeholder="search text goes here">
+    <br>
+    <button class="btn mt-4 " (click)="grid()">Grid View</button> &nbsp;
+    <button class="btn mt-4 " (click)="list()">List View</button>
+    <div class="row  pt-5 justify-content-center" #myelement [ngClass]="{'list':listView}">
+      <div class="card-deck" *ngFor="let obj of arr | filter : searchText" (click)="redirectTo(obj.productName)">
+        <div class="card p-4 m-4">
+          <img class="card-img-top" style="max-width: 16rem" class="img-fluid" src=" {{obj.productImage}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"> {{obj.productName}}</h5>
+            <p class="card-text"> Price :{{obj.productPrice}} </p>
+            <p class="card-text">
+              <small>Category :{{obj.productCategory}} </small>
+            </p>
+            <button class="btn btn-primary" (click)="storeData(obj,$event)" [disabled]="cart">Add to cart &nbsp;
+              <i class="icon-basket"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

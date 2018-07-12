@@ -1,0 +1,44 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+@import '../../scss/general';
+header{
+    nav{
+        height: 10vh;
+    }
+    color: $textColor;
+    height: 100vh;
+
+    .user-image{
+        widows: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid $whiteColor;
+    }
+    
+    .part2{
+        @include backgroundImg('../../assets/images/header/product-selector-header-1.jpg');
+        height: 90vh;
+        
+    }
+    button:hover{
+        background-color:$mainColor;
+        color: $whiteColor;    
+    }
+    i{
+        font-size: 1.8em;
+        color: $whiteColor;
+    }
+    h5{
+        @include font_h5(1.5em);
+    }
+    h4{
+        @include font_h4(2.5em);
+    }
+    .logo{
+        color: $whiteColor;
+        @include font_p(1.5em)
+    }
+    .logo:hover{
+       text-decoration: none;
+    } 
+}

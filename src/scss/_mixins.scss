@@ -1,0 +1,42 @@
+/* ===========  background image ===========*/
+@mixin backgroundImg($imgpath,$position:20% 10%,$size: cover,$repeat: no-repeat) {
+    background: transparent url(#{$imgpath}) $repeat $position;
+}
+@mixin backgroundImgContain($imgpath,$size: contain,$repeat: no-repeat) {
+  background: transparent url(#{$imgpath}) $repeat;
+}
+
+/* ===========  generic transform ===========*/
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+/* ===========  generic transition ===========*/
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+/*========== ::before and ::afte mixin================*/
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+  /*========== fonts ================*/
+  @mixin font_p($x){
+    font-size: $x;
+  }
+ @mixin font_h4($x){
+    font-size: $x;
+  }
+  @mixin font_h5($x){
+    font-size: $x;
+  }

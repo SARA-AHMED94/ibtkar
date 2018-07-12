@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+section{
+color: $textColor;
+  .btn,.btn:active{
+    background-color: $secondaryColor;
+    border: none;
+    color: $whiteColor;
+  }
+
+  .card{
+    box-shadow: 0px 3px 10px 0px rgba(133, 133, 133, 0.25);   
+  }
+.list{
+ display: block;
+ max-width: 20rem;
+}
+}
